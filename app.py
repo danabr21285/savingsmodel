@@ -6,12 +6,12 @@ import plotly.express as px
 
 st.set_page_config(page_title="Savings Growth What‑If", page_icon="💵", layout="wide")
 st.title("💵 Savings Growth What‑If Model")
-st.caption("Interactive model based on your spreadsheet assumptions. Adjust inputs to run quick scenario analyses.")
+st.caption("Adjust inputs to run quick scenario analyses.")
 
 with st.sidebar:
     st.header("Assumptions — Scenario A")
-    pv_a = st.number_input("Starting Balance (PV)", min_value=0.0, value=20000.0, step=100.0, format="%.2f")
-    pmt_a = st.number_input("Monthly Savings", min_value=0.0, value=700.0, step=50.0, format="%.2f")
+    pv_a = st.number_input("Starting Savings Balance (PV)", min_value=0.0, value=20000.0, step=100.0, format="%.2f")
+    pmt_a = st.number_input("Monthly Savings Payments", min_value=0.0, value=700.0, step=50.0, format="%.2f")
     r_annual_a = st.number_input("Annual Interest Rate", min_value=0.0, max_value=1.0, value=0.06, step=0.005, format="%.3f")
     years_a = st.number_input("Savings Period (years)", min_value=1, max_value=60, value=int(15.0), step=1)
 
@@ -19,8 +19,8 @@ with st.sidebar:
     compare = st.checkbox("Compare with Scenario B")
     if compare:
         st.header("Assumptions — Scenario B")
-        pv_b = st.number_input("Starting Balance (PV) — B", min_value=0.0, value=20000.0, step=100.0, format="%.2f", key="pv_b")
-        pmt_b = st.number_input("Monthly Savings — B", min_value=0.0, value=700.0, step=50.0, format="%.2f", key="pmt_b")
+        pv_b = st.number_input("Starting Savings Balance (PV) — B", min_value=0.0, value=20000.0, step=100.0, format="%.2f", key="pv_b")
+        pmt_b = st.number_input("Monthly Savings Payments— B", min_value=0.0, value=700.0, step=50.0, format="%.2f", key="pmt_b")
         r_annual_b = st.number_input("Annual Interest Rate — B", min_value=0.0, max_value=1.0, value=0.06, step=0.005, format="%.3f", key="r_b")
         years_b = st.number_input("Savings Period (years) — B", min_value=1, max_value=60, value=int(15.0), step=1, key="yrs_b")
 
