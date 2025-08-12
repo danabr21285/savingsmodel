@@ -2,6 +2,12 @@
 
 Interactive web app for exploring savings growth over time with adjustable assumptions and optional A/B scenario comparisons.
 
+----
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://savingsmodel-dtjxzhgfzrp4ajr4dfhmsz.streamlit.app/)
+
+
+![demo](assets/demo.gif)
+---
 ## Features
 - Adjustable inputs: starting balance, monthly savings, annual interest rate, horizon (years)
 - Monthly compounding with end-of-month contributions
